@@ -8,8 +8,8 @@ logging.basicConfig(level=logging.INFO)
 
 
 class YouTubeDataPipeline:
-    def __init__(self, video_urls=['https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'https://www.youtube.com/watch?v=9bZkp7q19f0'],
-                 spreadsheet_id='1hhKl_UliaVWZiSOx599rmdm-_Z_fKPEiV4-tfN7VWek'):
+    def __init__(self, video_urls=['url_1', 'url_2'], # Заменить на свои значения
+                 spreadsheet_id='spreadsheet_id'): # Заменить на свое значение
         self.scraper = YouTubeScraper(video_urls)
         self.parser = YouTubeParser()
         self.writer = GoogleSheetWriter(spreadsheet_id)

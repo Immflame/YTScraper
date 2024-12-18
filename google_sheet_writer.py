@@ -15,7 +15,7 @@ class GoogleSheetWriter:
 
     @staticmethod
     def get_creds():
-        creds = service_account.Credentials.from_service_account_file(r'C:\Users\Homepc\YTScraper\credentials.json') # Замените на ваш путь
+        creds = service_account.Credentials.from_service_account_file(r'credentials.json') # Замените на ваш путь
         return creds
 
     async def init_spreadsheet(self):
